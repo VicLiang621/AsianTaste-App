@@ -14,18 +14,11 @@
     <View
     android:layout_height="match_parent"
     android:layout_width="1dp"
-    android:layout_toRightOf="@id/fried_veggie"
+    android:layout_centerInParent="true"
     android:background="@android:color/darker_gray"
         android:id="@+id/view" />
 
 
-    <Button android:id = "@+id/fried_wonton"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below= "@id/back_button"
-        android:text = "Fried Wonton\n炸雲吞" >
-
-    </Button>
 
 
     <Button android:id = "@+id/back_button"
@@ -36,164 +29,6 @@
 
     </Button>
 
-    <Button
-        android:id="@+id/egg_roll"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_alignTop="@+id/fried_wonton"
-        android:layout_toRightOf="@+id/fried_wonton"
-        android:layout_toEndOf="@+id/fried_wonton"
-        android:text = "Egg Roll\n春捲" >
-
-    </Button>
-
-    <Button
-        android:id="@+id/spring_roll"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_alignTop="@+id/egg_roll"
-        android:layout_toRightOf="@+id/egg_roll"
-        android:layout_toEndOf="@+id/egg_roll"
-        android:text = "Spring Roll\n上海春捲"/>
-
-    <Button
-        android:id="@+id/scallion_pancake"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/back_button"
-        android:layout_toRightOf="@+id/spring_roll"
-        android:layout_toEndOf="@+id/spring_roll"
-        android:text = "Scallion Pancake\n葱油餅"/>
-
-    <Button
-        android:id="@+id/fried_veggie"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:text = "Fried Veggie\n炸蔬菜"
-        android:layout_alignTop="@+id/scallion_pancake"
-        android:layout_toRightOf="@+id/scallion_pancake"
-        android:layout_toEndOf="@+id/scallion_pancake" />
-
-    <Button
-        android:id="@+id/chicken_wings"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/fried_wonton"
-        android:layout_alignLeft="@+id/fried_wonton"
-        android:layout_alignStart="@+id/fried_wonton"
-        android:text = "Chicken Wings\n鷄翅膀"/>
-
-    <Button
-        android:id="@+id/spicy_chicken_wing"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/egg_roll"
-        android:layout_toRightOf="@+id/fried_wonton"
-        android:layout_toEndOf="@+id/fried_wonton" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/spring_roll"
-        android:layout_toLeftOf="@+id/scallion_pancake"
-        android:layout_toStartOf="@+id/scallion_pancake" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/spring_roll"
-        android:layout_alignRight="@+id/scallion_pancake"
-        android:layout_alignEnd="@+id/scallion_pancake" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/scallion_pancake"
-        android:layout_toLeftOf="@+id/view"
-        android:layout_toStartOf="@+id/view" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/chicken_wings"
-        android:layout_alignRight="@+id/spicy_chicken_wing"
-        android:layout_alignEnd="@+id/spicy_chicken_wing" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/chicken_wings"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/spicy_chicken_wing"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button"
-        android:layout_toLeftOf="@+id/button3"
-        android:layout_toStartOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignRight="@+id/view"
-        android:layout_alignEnd="@+id/view" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button4"
-        android:layout_toRightOf="@+id/button5"
-        android:layout_toEndOf="@+id/button5" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button6"
-        android:layout_alignLeft="@+id/button6"
-        android:layout_alignStart="@+id/button6" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button7"
-        android:layout_alignLeft="@+id/button7"
-        android:layout_alignStart="@+id/button7" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="125dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/button8"
-        android:layout_alignLeft="@+id/button8"
-        android:layout_alignStart="@+id/button8" />
 
 
 </RelativeLayout>
