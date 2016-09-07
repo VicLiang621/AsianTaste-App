@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,6 +30,557 @@
 
     </Button>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/fried_wonton_text"
+        android:text = "Fried Wonton"
+        android:layout_below="@+id/back_button"
+        android:layout_alignRight="@+id/pan_fried_ravioli_text"
+        android:layout_alignEnd="@+id/pan_fried_ravioli_text">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Egg Roll"
+        android:id="@+id/egg_roll_text"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_above="@+id/button"
+        android:layout_alignLeft="@+id/pupu2_text"
+        android:layout_alignStart="@+id/pupu2_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spring Roll"
+        android:id="@+id/spring_roll_text"
+        android:layout_alignBaseline="@+id/egg_roll_text"
+        android:layout_alignBottom="@+id/egg_roll_text"
+        android:layout_toRightOf="@+id/large_egg_roll"
+        android:layout_toEndOf="@+id/large_egg_roll"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Scallion Pancake"
+        android:id="@+id/scallion_pancake_text"
+        android:layout_below="@+id/large_egg_roll" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Fried Veggie"
+        android:id="@+id/fried_veggie_text"
+        android:layout_below="@+id/large_egg_roll"
+        android:layout_alignRight="@+id/pork_strip_text"
+        android:layout_alignEnd="@+id/pork_strip_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Chicken Wings"
+        android:id="@+id/chicken_wings_text"
+        android:layout_below="@+id/small_spring_roll"
+        android:layout_alignRight="@+id/large_spring_roll"
+        android:layout_alignEnd="@+id/large_spring_roll"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spicy Chicken Wing"
+        android:id="@+id/spicy_chicken_wing_text"
+        android:layout_below="@+id/small_scall_pancake"
+        android:layout_alignLeft="@+id/small_scall_pancake"
+        android:layout_alignStart="@+id/small_scall_pancake" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pork Strip"
+        android:id="@+id/pork_strip_text"
+        android:layout_alignTop="@+id/spicy_chicken_wing_text"
+        android:layout_alignLeft="@+id/egg_roll_text"
+        android:layout_alignStart="@+id/egg_roll_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="BBQ Spareribs"
+        android:id="@+id/bbq_spareribs_text"
+        android:layout_alignTop="@+id/pork_strip_text"
+        android:layout_alignRight="@+id/chicken_wings_text"
+        android:layout_alignEnd="@+id/chicken_wings_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Boneless Spareribs"
+        android:id="@+id/boneless_spareriibs_text"
+        android:layout_below="@+id/small_pork_strip"
+        android:layout_alignLeft="@+id/scallion_pancake_text"
+        android:layout_alignStart="@+id/scallion_pancake_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Crab Rangoon"
+        android:id="@+id/crab_rangoon_text"
+        android:layout_below="@+id/small_pork_strip"
+        android:layout_alignLeft="@+id/fried_veggie_text"
+        android:layout_alignStart="@+id/fried_veggie_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Chicken Fingers"
+        android:id="@+id/chicken_fingers_text"
+        android:layout_below="@+id/small_bbq_spareribs"
+        android:layout_alignRight="@+id/bbq_spareribs_text"
+        android:layout_alignEnd="@+id/bbq_spareribs_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Jumbo Fried Shrimp"
+        android:id="@+id/jumbo_fried_shrimp_text"
+        android:layout_below="@+id/large_boneless_spareribs"
+        android:layout_alignLeft="@+id/small_boneless_spareribs"
+        android:layout_alignStart="@+id/small_boneless_spareribs" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Beef Teriyaki"
+        android:id="@+id/beef_teriyaki_text"
+        android:layout_alignTop="@+id/jumbo_fried_shrimp_text"
+        android:layout_alignLeft="@+id/crab_rangoon_text"
+        android:layout_alignStart="@+id/crab_rangoon_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Chicken Teriyaki"
+        android:id="@+id/chicken_teriyaki_text"
+        android:layout_alignTop="@+id/beef_teriyaki_text"
+        android:layout_alignLeft="@+id/chicken_fingers_text"
+        android:layout_alignStart="@+id/chicken_fingers_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pan Fried Ravioli"
+        android:id="@+id/pan_fried_ravioli_text"
+        android:layout_below="@+id/small_beef_teriyaki"
+        android:layout_alignRight="@+id/scallion_pancake_text"
+        android:layout_alignEnd="@+id/scallion_pancake_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Spicy Wonton"
+        android:id="@+id/spicy_wonton_text"
+        android:layout_below="@+id/large_fried_shrimp"
+        android:layout_alignLeft="@+id/beef_teriyaki_text"
+        android:layout_alignStart="@+id/beef_teriyaki_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pu Pu Platter for 2"
+        android:id="@+id/pupu2_text"
+        android:layout_alignTop="@+id/pupu1_text"
+        android:layout_toLeftOf="@+id/small_spring_roll"
+        android:layout_toStartOf="@+id/small_spring_roll" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pu Pu Platter for 1"
+        android:id="@+id/pupu1_text"
+        android:layout_below="@+id/small_spicy_wonton"
+        android:layout_alignRight="@+id/large_pfr"
+        android:layout_alignEnd="@+id/large_pfr" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tidbits"
+        android:id="@+id/tidbits_text"
+        android:layout_alignTop="@+id/pupu2_text"
+        android:layout_alignLeft="@+id/spring_roll_text"
+        android:layout_alignStart="@+id/spring_roll_text" />
+
+
+    <Button android:id = "@+id/small_fried_wonton"
+        android:layout_width = "75dp"
+        android:layout_height = "50dp"
+        android:text = "Small\n小"
+        android:layout_below="@+id/fried_wonton_text">
+    </Button>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_below="@+id/fried_wonton_text"
+        android:layout_toRightOf="@+id/small_fried_wonton"
+        android:layout_alignBottom="@+id/small_fried_wonton"
+        android:layout_alignRight="@+id/boneless_spareriibs_text"
+        android:layout_alignEnd="@+id/boneless_spareriibs_text" />
+
+    <Button
+        android:id="@+id/small_egg_roll"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/egg_roll_text"
+        android:layout_toRightOf="@+id/jumbo_fried_shrimp_text" />
+
+    <Button
+        android:id="@+id/large_egg_roll"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignBaseline="@+id/small_egg_roll"
+        android:layout_alignBottom="@+id/small_egg_roll"
+        android:layout_toRightOf="@+id/small_egg_roll"
+        android:layout_toEndOf="@+id/small_egg_roll" />
+
+    <Button
+        android:id="@+id/small_spring_roll"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_alignTop="@+id/large_egg_roll"
+        android:layout_toRightOf="@+id/large_egg_roll"
+        android:layout_toEndOf="@+id/large_egg_roll" />
+
+    <Button
+        android:id="@+id/large_spring_roll"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignTop="@+id/small_spring_roll"
+        android:layout_toRightOf="@+id/small_spring_roll"
+        android:layout_toEndOf="@+id/small_spring_roll" />
+
+    <Button
+        android:id="@+id/small_scall_pancake"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/scallion_pancake_text"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <Button
+        android:id="@+id/large_scall_pancake"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_above="@+id/spicy_chicken_wing_text"
+        android:layout_toRightOf="@+id/small_scall_pancake"
+        android:layout_toEndOf="@+id/small_scall_pancake">
+    </Button>
+
+    <Button
+        android:id="@+id/small_fried_veggie"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/fried_veggie_text"
+        android:layout_toLeftOf="@+id/large_egg_roll"
+        android:layout_toStartOf="@+id/large_egg_roll" />
+
+    <Button
+        android:id="@+id/large_fried_veggie"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_above="@+id/spicy_chicken_wing_text"
+        android:layout_toRightOf="@+id/small_fried_veggie"
+        android:layout_toEndOf="@+id/small_fried_veggie" />
+
+    <Button
+        android:id="@+id/small_chicken_wings"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_above="@+id/spicy_chicken_wing_text"
+        android:layout_alignLeft="@+id/small_spring_roll"
+        android:layout_alignStart="@+id/small_spring_roll" />
+
+    <Button
+        android:id="@+id/large_chicken_wings"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_above="@+id/spicy_chicken_wing_text"
+        android:layout_toRightOf="@+id/small_chicken_wings"
+        android:layout_toEndOf="@+id/small_chicken_wings" />
+
+    <Button
+        android:id="@+id/small_spicy_cw"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/spicy_chicken_wing_text"
+        android:layout_alignLeft="@+id/spicy_chicken_wing_text"
+        android:layout_alignStart="@+id/spicy_chicken_wing_text" />
+
+    <Button
+        android:id="@+id/large_spicy_cw"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_below="@+id/spicy_chicken_wing_text"
+        android:layout_toRightOf="@+id/small_spicy_cw"
+        android:layout_toEndOf="@+id/small_spicy_cw" />
+
+    <Button
+        android:id="@+id/small_pork_strip"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_alignBaseline="@+id/large_spicy_cw"
+        android:layout_alignBottom="@+id/large_spicy_cw"
+        android:layout_toLeftOf="@+id/large_fried_veggie"
+        android:layout_toStartOf="@+id/large_fried_veggie" />
+
+    <Button
+        android:id="@+id/large_pork_strip"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_below="@+id/pork_strip_text"
+        android:layout_toRightOf="@+id/small_pork_strip"
+        android:layout_toEndOf="@+id/small_pork_strip" />
+
+    <Button
+        android:id="@+id/small_bbq_spareribs"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_alignBaseline="@+id/large_pork_strip"
+        android:layout_alignBottom="@+id/large_pork_strip"
+        android:layout_alignLeft="@+id/small_chicken_wings"
+        android:layout_alignStart="@+id/small_chicken_wings" />
+
+    <Button
+        android:id="@+id/large_bbq_spareribs"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignBaseline="@+id/large_pork_strip"
+        android:layout_alignBottom="@+id/large_pork_strip"
+        android:layout_toRightOf="@+id/small_bbq_spareribs"
+        android:layout_toEndOf="@+id/small_bbq_spareribs" />
+
+    <Button
+        android:id="@+id/small_boneless_spareribs"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/crab_rangoon_text"
+        android:layout_alignLeft="@+id/boneless_spareriibs_text"
+        android:layout_alignStart="@+id/boneless_spareriibs_text" />
+
+    <Button
+        android:id="@+id/large_boneless_spareribs"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignBaseline="@+id/small_boneless_spareribs"
+        android:layout_alignBottom="@+id/small_boneless_spareribs"
+        android:layout_toRightOf="@+id/small_boneless_spareribs"
+        android:layout_toEndOf="@+id/small_boneless_spareribs" />
+
+    <Button
+        android:id="@+id/small_crab_rangoon"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/boneless_spareriibs_text"
+        android:layout_toLeftOf="@+id/large_pork_strip"
+        android:layout_toStartOf="@+id/large_pork_strip" />
+
+    <Button
+        android:id="@+id/large_crab_rangoon"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignTop="@+id/small_crab_rangoon"
+        android:layout_toRightOf="@+id/small_crab_rangoon"
+        android:layout_toEndOf="@+id/small_crab_rangoon" />
+
+    <Button
+        android:id="@+id/small_chicken_fingers"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/chicken_fingers_text"
+        android:layout_alignLeft="@+id/small_bbq_spareribs"
+        android:layout_alignStart="@+id/small_bbq_spareribs" />
+
+    <Button
+        android:id="@+id/large_chicken_fingers"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_below="@+id/chicken_fingers_text"
+        android:layout_toRightOf="@+id/small_chicken_fingers"
+        android:layout_toEndOf="@+id/small_chicken_fingers" />
+
+    <Button
+        android:id="@+id/small_fried_shrimp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/jumbo_fried_shrimp_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/large_fried_shrimp"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_below="@+id/jumbo_fried_shrimp_text"
+        android:layout_toRightOf="@+id/small_fried_shrimp"
+        android:layout_toEndOf="@+id/small_fried_shrimp" />
+
+    <Button
+        android:id="@+id/small_beef_teriyaki"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_alignBaseline="@+id/large_fried_shrimp"
+        android:layout_alignBottom="@+id/large_fried_shrimp"
+        android:layout_toRightOf="@+id/jumbo_fried_shrimp_text"
+        android:layout_toEndOf="@+id/jumbo_fried_shrimp_text" />
+
+    <Button
+        android:id="@+id/large_beef_teriyaki"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignTop="@+id/small_beef_teriyaki"
+        android:layout_toRightOf="@+id/small_crab_rangoon"
+        android:layout_toEndOf="@+id/small_crab_rangoon" />
+
+    <Button
+        android:id="@+id/small_chicken_teriyaki"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_alignBaseline="@+id/large_fried_shrimp"
+        android:layout_alignBottom="@+id/large_fried_shrimp"
+        android:layout_alignLeft="@+id/small_chicken_fingers"
+        android:layout_alignStart="@+id/small_chicken_fingers" />
+
+    <Button
+        android:id="@+id/large_chicken_teriyaki"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignTop="@+id/small_chicken_teriyaki"
+        android:layout_toRightOf="@+id/small_chicken_teriyaki"
+        android:layout_toEndOf="@+id/small_chicken_teriyaki" />
+
+    <Button
+        android:id="@+id/small_pfr"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_below="@+id/pan_fried_ravioli_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/large_pfr"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_below="@+id/pan_fried_ravioli_text"
+        android:layout_toRightOf="@+id/small_fried_shrimp"
+        android:layout_toEndOf="@+id/small_fried_shrimp" />
+
+    <Button
+        android:id="@+id/small_spicy_wonton"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Small\n小"
+        android:layout_alignBaseline="@+id/large_pfr"
+        android:layout_alignBottom="@+id/large_pfr"
+        android:layout_toLeftOf="@+id/large_beef_teriyaki"
+        android:layout_toStartOf="@+id/large_beef_teriyaki" />
+
+    <Button
+        android:id="@+id/large_spicy_wonton"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Large\n大"
+        android:layout_alignTop="@+id/small_spicy_wonton"
+        android:layout_toRightOf="@+id/small_spicy_wonton"
+        android:layout_toEndOf="@+id/small_spicy_wonton" />
+
+    <Button
+        android:id="@+id/tibits_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Select\n選擇"
+        android:layout_below="@+id/tidbits_text"
+        android:layout_alignRight="@+id/spring_roll_text"
+        android:layout_alignEnd="@+id/spring_roll_text" />
+
+    <Button
+        android:id="@+id/pupu1_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Select\n選擇"
+        android:layout_below="@+id/pupu1_text"
+        android:layout_alignLeft="@+id/fried_wonton_text"
+        android:layout_alignStart="@+id/fried_wonton_text" />
+
+    <Button
+        android:id="@+id/pupu2_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Select\n選擇"
+        android:layout_below="@+id/pupu2_text"
+        android:layout_alignLeft="@+id/spicy_wonton_text"
+        android:layout_alignStart="@+id/spicy_wonton_text" />
 
 
 </RelativeLayout>
+
