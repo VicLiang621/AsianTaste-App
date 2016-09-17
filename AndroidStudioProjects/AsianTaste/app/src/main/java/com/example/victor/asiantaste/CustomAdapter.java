@@ -73,7 +73,7 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
         String priceViewText = "$" + String.valueOf(initialPrice);
         priceView.setText(priceViewText);
         final TextView quantityText = (TextView)view.findViewById(R.id.quantityView); //TODO: Need to change this so that any quantity can be inputted
-        quantityText.setText(String.valueOf(quantity_list.get(position)));
+        quantityText.setText(String.valueOf(quantity_list.get(position))); // TODO: No negatives allowed
 
 
 

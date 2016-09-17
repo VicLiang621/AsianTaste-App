@@ -14,23 +14,25 @@
         android:layout_height="175dp"
         android:layout_centerInParent="true"
         android:layout_toLeftOf="@+id/chicken_button"
-        android:text="Beef\n牛肉類"/>
+        android:layout_toStartOf="@+id/chicken_button"
+        android:text="@string/beefString"/>
     <Button android:id = "@+id/chicken_button"
         android:layout_width="150dp"
         android:layout_height="175dp"
         android:layout_centerInParent="true"
-        android:text="Chicken\n雞類"/>
+        android:text="@string/chickenString"/>
     <Button android:id = "@+id/pork_button"
         android:layout_width="150dp"
         android:layout_height="175dp"
         android:layout_centerInParent="true"
         android:layout_toRightOf="@+id/chicken_button"
-        android:text="Pork\n豬肉類"/>
+        android:layout_toEndOf="@+id/chicken_button"
+        android:text="@string/porkString"/>
 
     <Button android:id = "@+id/back_button_meats"
         android:layout_width = "100dp"
         android:layout_height = "50dp"
-        android:text = "Back\n返回">
+        android:text = "@string/backString">
     </Button>
 
 </RelativeLayout>
