@@ -27,10 +27,9 @@
         android:layout_toRightOf="@+id/chicken_button"
         android:text="Pork\n豬肉類"/>
 
-    <Button android:id = "@+id/back_button"
+    <Button android:id = "@+id/back_button_meats"
         android:layout_width = "100dp"
         android:layout_height = "50dp"
-        android:onClick="go_back"
         android:text = "Back\n返回">
     </Button>
 

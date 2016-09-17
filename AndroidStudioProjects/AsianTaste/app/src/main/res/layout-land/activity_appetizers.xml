@@ -30,10 +30,9 @@
 
 
 
-    <Button android:id = "@+id/back_button"
+    <Button android:id = "@+id/back_button_appetizer"
         android:layout_width = "100dp"
         android:layout_height = "50dp"
-        android:onClick="go_back"
         android:text = "Back\n返回">
 
     </Button>
@@ -44,7 +43,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/fried_wonton_text"
         android:text = "Fried Wonton"
-        android:layout_below="@+id/back_button"
+        android:layout_below="@+id/back_button_appetizer"
         android:layout_alignRight="@+id/pan_fried_ravioli_text"
         android:layout_alignEnd="@+id/pan_fried_ravioli_text">
 
@@ -580,41 +579,7 @@
         android:layout_toRightOf="@+id/middle_line"
         android:layout_toEndOf="@+id/middle_line" />
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:layout_alignTop="@+id/middle_line"
-        android:layout_toEndOf="@+id/middle_line"
-        android:layout_above="@+id/total_text"
-        android:layout_toRightOf="@+id/middle_line"
-        android:id="@+id/scrollView">
 
-        <LinearLayout
-            android:id="@+id/order_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Order"
-                android:id="@+id/Order_text" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="PrintOrderList"
-                android:id="@+id/btn37"
-                android:layout_alignBottom="@+id/btn36"
-                android:layout_toRightOf="@+id/total_text"
-                android:layout_toEndOf="@+id/total_text" />
-        </LinearLayout>
-
-    </ScrollView>
 
     <Button
         android:id="@+id/btn33"
@@ -624,6 +589,38 @@
         android:layout_alignTop="@+id/horizontal_split"
         android:layout_alignRight="@+id/beef_teriyaki_text"
         android:layout_alignEnd="@+id/beef_teriyaki_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PrintOrderList"
+        android:id="@+id/btn37"
+        android:layout_marginRight="151dp"
+        android:layout_marginEnd="151dp"
+        android:layout_alignBottom="@+id/btn36"
+        android:layout_alignRight="@+id/horizontal_split"
+        android:layout_alignEnd="@+id/horizontal_split" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_toEndOf="@+id/middle_line"
+        android:layout_above="@+id/horizontal_split"
+        android:layout_toRightOf="@+id/middle_line"
+        android:layout_below="@+id/Order_textview" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Order"
+        android:id="@+id/Order_textview"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btn37"
+        android:layout_alignEnd="@+id/btn37"
+        android:layout_marginRight="68dp"
+        android:layout_marginEnd="68dp" />
 
 
 </RelativeLayout>

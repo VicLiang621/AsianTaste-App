@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/list_item_string"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:paddingLeft="8dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text= "Text goes here"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/delete_button"
+        android:layout_toEndOf="@+id/delete_button" />
+
+    <Button
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Delete"
+        android:id="@+id/delete_button"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:id="@+id/priceView"
+        android:layout_width="75dp"
+        android:layout_height="20dp"
+        android:paddingLeft="8dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="Price"
+        android:layout_marginLeft="140dp"
+        android:layout_marginStart="140dp"
+        android:layout_alignTop="@+id/list_item_string"
+        android:layout_toRightOf="@+id/list_item_string"
+        android:layout_toEndOf="@+id/list_item_string" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/subtract_button"
+        android:layout_alignTop="@+id/delete_button"
+        android:layout_toRightOf="@+id/list_item_string"
+        android:layout_toEndOf="@+id/list_item_string"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp" />
+    <Button
+    style="?android:attr/buttonStyleSmall"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="+"
+    android:id="@+id/add_button"
+        android:layout_alignBottom="@+id/delete_button"
+        android:layout_toRightOf="@+id/quantityView"
+        android:layout_toEndOf="@+id/quantityView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="4"
+        android:id="@+id/quantityView"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/subtract_button"
+        android:layout_toEndOf="@+id/subtract_button" />
+
+
+</RelativeLayout>

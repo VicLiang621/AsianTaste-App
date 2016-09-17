@@ -5,17 +5,33 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Appetizers extends AppCompatActivity implements View.OnClickListener {
 
+    int[] quantities;
+    CustomAdapter adapter;
+    OrderClass orderClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appetizers);
         setupButtons();
+        orderClass = ((OrderClass)getApplicationContext());
+        HashMap<String, String> menu = orderClass.getMenu();
+
+
+        adapter = new CustomAdapter(orderClass.getOrderNameList(),
+                orderClass.getQuantityList(), menu, orderClass, this);
+
+        ListView listView = (ListView)findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+
 
     }
 
@@ -26,127 +42,137 @@ public class Appetizers extends AppCompatActivity implements View.OnClickListene
             int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
             buttons[i] = ((Button) findViewById(resID));
             buttons[i].setOnClickListener(this);
-
         }
+        Button back_button = (Button)findViewById(R.id.back_button_appetizer);
+        back_button.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
         Log.d("Test", "Inside onClick function");
-        final OrderClass orders = ((OrderClass) getApplicationContext());
+        orderClass = ((OrderClass) getApplicationContext());
         switch(v.getId()){
             case R.id.btn1:
                 Log.d("Test", "got inside switch");
-                orders.addAppetizer("Small Fried Wonton");
+                orderClass.addAppetizer("Small Fried Wonton", adapter); //
+                // TODO: I don't know if passing in an adapter to notify it is better or just calling notify dataset in each switch case itself
                 break;
             case R.id.btn2:
-                orders.addAppetizer("Large Fried Wonton");
+                orderClass.addAppetizer("Large Fried Wonton", adapter);
                 break;
             case R.id.btn3 :
-                orders.addAppetizer("Small Egg Roll");
+                orderClass.addAppetizer("Small Egg Roll", adapter);
+
                 break;
             case R.id.btn4:
-                orders.addAppetizer("Large Egg Roll");
+                orderClass.addAppetizer("Large Egg Roll", adapter);
                 break;
             case R.id.btn5:
-                orders.addAppetizer("Small Spring Roll");
+                orderClass.addAppetizer("Small Spring Roll",adapter);
                 break;
             case R.id.btn6:
-                orders.addAppetizer("Large Spring Roll");
+                orderClass.addAppetizer("Large Spring Roll", adapter);
                 break;
             case R.id.btn7:
-                orders.addAppetizer("Small Scallion Pancake");
+                orderClass.addAppetizer("Small Scallion Pancake", adapter);
                 break;
             case R.id.btn8:
-                orders.addAppetizer("Large Scallion Pancake");
+                orderClass.addAppetizer("Large Scallion Pancake", adapter);
                 break;
             case R.id.btn9:
-                orders.addAppetizer("Small Fried Veggie");
+                orderClass.addAppetizer("Small Fried Veggie", adapter);
                 break;
             case R.id.btn10:
-                orders.addAppetizer("Large Fried Veggie");
+                orderClass.addAppetizer("Large Fried Veggie", adapter);
                 break;
             case R.id.btn11:
-                orders.addAppetizer("Small Chicken Wings");
+                orderClass.addAppetizer("Small Chicken Wings", adapter);
                 break;
             case R.id.btn12:
-                orders.addAppetizer("Large Chicken Wings");
+                orderClass.addAppetizer("Large Chicken Wings", adapter);
                 break;
             case R.id.btn13:
-                orders.addAppetizer("Small Spicy Chicken Wings");
+                orderClass.addAppetizer("Small Spicy Chicken Wings", adapter);
                 break;
             case R.id.btn14:
-                orders.addAppetizer("Large Spicy Chicken Wings");
+                orderClass.addAppetizer("Large Spicy Chicken Wings", adapter);
                 break;
             case R.id.btn15:
-                orders.addAppetizer("Small Pork Strip");
+                orderClass.addAppetizer("Small Pork Strip", adapter);
                 break;
             case R.id.btn16:
-                orders.addAppetizer("Large Pork Strip");
+                orderClass.addAppetizer("Large Pork Strip", adapter);
                 break;
             case R.id.btn17:
-                orders.addAppetizer("Small BBQ Spareribs");
+                orderClass.addAppetizer("Small BBQ Spareribs",adapter);
                 break;
             case R.id.btn18:
-                orders.addAppetizer("Large BBQ Spareribs");
+                orderClass.addAppetizer("Large BBQ Spareribs", adapter);
                 break;
             case R.id.btn19:
-                orders.addAppetizer("Small Boneless Spareribs");
+                orderClass.addAppetizer("Small Boneless Spareribs", adapter);
                 break;
             case R.id.btn20:
-                orders.addAppetizer("Large Boneless Spareribs");
+                orderClass.addAppetizer("Large Boneless Spareribs", adapter);
                 break;
             case R.id.btn21:
-                orders.addAppetizer("Small Crab Rangoon");
+                orderClass.addAppetizer("Small Crab Rangoon", adapter );
                 break;
             case R.id.btn22:
-                orders.addAppetizer("Large Crab Rangoon");
+                orderClass.addAppetizer("Large Crab Rangoon", adapter);
                 break;
             case R.id.btn23:
-                orders.addAppetizer("Small Chicken Fingers");
+                orderClass.addAppetizer("Small Chicken Fingers", adapter);
                 break;
             case R.id.btn24:
-                orders.addAppetizer("Large Chicken Fingers");
+                orderClass.addAppetizer("Large Chicken Fingers", adapter);
                 break;
             case R.id.btn25:
-                orders.addAppetizer("Small Jumbo Fried Shrimp");
+                orderClass.addAppetizer("Small Jumbo Fried Shrimp", adapter);
                 break;
             case R.id.btn26:
-                orders.addAppetizer("Large Jumbo Fried Shrimp");
+                orderClass.addAppetizer("Large Jumbo Fried Shrimp", adapter);
                 break;
             case R.id.btn27:
-                orders.addAppetizer("Small Beef Teriyaki");
+                orderClass.addAppetizer("Small Beef Teriyaki", adapter);
                 break;
             case R.id.btn28:
-                orders.addAppetizer("Large Beef Teriyaki");
+                orderClass.addAppetizer("Large Beef Teriyaki", adapter);
                 break;
             case R.id.btn29:
-                orders.addAppetizer("Small Chicken Teriyaki");
+                orderClass.addAppetizer("Small Chicken Teriyaki", adapter);
                 break;
             case R.id.btn30:
-                orders.addAppetizer("Large Chicken Teriyaki");
+                orderClass.addAppetizer("Large Chicken Teriyaki", adapter);
                 break;
             case R.id.btn31:
-                orders.addAppetizer("Small Pan Fried Ravioli");
+                orderClass.addAppetizer("Small Pan Fried Ravioli", adapter);
                 break;
             case R.id.btn32:
-                orders.addAppetizer("Large Pan Fried Ravioli");
+                orderClass.addAppetizer("Large Pan Fried Ravioli", adapter);
                 break;
             case R.id.btn33:
-                orders.addAppetizer("Spicy Wonton with Bean Sprout");
+                orderClass.addAppetizer("Spicy Wonton with Bean Sprout", adapter);
                 break;
             case R.id.btn34:
-                orders.addAppetizer("Tidbits");
+                orderClass.addAppetizer("Tidbits", adapter);
                 break;
             case R.id.btn35:
-                orders.addAppetizer("Pu Pu Platter for One");
+                orderClass.addAppetizer("Pu Pu Platter for One", adapter);
                 break;
             case R.id.btn36:
-                orders.addAppetizer("Pu Pu Platter for Two");
+                orderClass.addAppetizer("Pu Pu Platter for Two", adapter);
                 break;
             case R.id.btn37:
-                orders.printOrders();
+                orderClass.printOrders();
+                break;
+            case R.id.back_button_appetizer:
+                Toast.makeText(Appetizers.this, "Clicked back button", Toast.LENGTH_LONG).show();
+                orderClass.reUpdateOrderhm(adapter.getOrderNamesList(), adapter.getQuantityList());
+                finish();
+
         }
     }
+
 
 
 
