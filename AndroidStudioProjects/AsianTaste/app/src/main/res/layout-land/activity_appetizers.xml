@@ -578,11 +578,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/totalString"
-        android:id="@+id/total_text"
+        android:text="@string/subtotalString"
+        android:id="@+id/subtotalView"
         android:layout_below="@+id/horizontal_split"
-        android:layout_toRightOf="@+id/middle_line"
-        android:layout_toEndOf="@+id/middle_line" />
+        android:layout_alignLeft="@+id/middle_line"
+        android:layout_alignStart="@+id/middle_line" />
 
 
 
@@ -600,9 +600,7 @@
         android:layout_height="wrap_content"
         android:text="PrintOrderList"
         android:id="@+id/btn37"
-        android:layout_marginRight="151dp"
-        android:layout_marginEnd="151dp"
-        android:layout_alignBottom="@+id/btn36"
+        android:layout_alignBottom="@+id/middle_line"
         android:layout_alignRight="@+id/horizontal_split"
         android:layout_alignEnd="@+id/horizontal_split" />
 
@@ -621,11 +619,94 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/orderString"
         android:id="@+id/Order_textview"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/btn37"
-        android:layout_alignEnd="@+id/btn37"
-        android:layout_marginRight="68dp"
-        android:layout_marginEnd="68dp" />
+        android:layout_marginRight="73dp"
+        android:layout_marginEnd="73dp"
+        android:layout_alignTop="@+id/middle_line"
+        android:layout_toLeftOf="@+id/btn37"
+        android:layout_toStartOf="@+id/btn37" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/taxString"
+        android:id="@+id/taxView"
+        android:layout_below="@+id/subtotalView"
+        android:layout_alignLeft="@+id/subtotalView"
+        android:layout_alignStart="@+id/subtotalView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/totalString"
+        android:id="@+id/totalView"
+        android:layout_below="@+id/taxView"
+        android:layout_alignLeft="@+id/taxView"
+        android:layout_alignStart="@+id/taxView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0.00"
+        android:id="@+id/subtotalpriceView"
+        android:layout_below="@+id/horizontal_split"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0.00"
+        android:id="@+id/taxPriceView"
+        android:layout_above="@+id/totalPriceView"
+        android:layout_alignLeft="@+id/totalPriceView"
+        android:layout_alignStart="@+id/totalPriceView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0.00"
+        android:id="@+id/totalPriceView"
+        android:layout_below="@+id/taxView"
+        android:layout_toRightOf="@+id/subtotalView"
+        android:layout_toEndOf="@+id/subtotalView"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$"
+        android:id="@+id/dollarView"
+        android:layout_below="@+id/horizontal_split"
+        android:layout_toLeftOf="@+id/subtotalpriceView"
+        android:layout_toStartOf="@+id/subtotalpriceView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$"
+        android:id="@+id/textView"
+        android:layout_below="@+id/dollarView"
+        android:layout_toStartOf="@id/taxPriceView"
+        android:layout_toLeftOf="@id/taxPriceView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="$"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/totalPriceView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
 
 
 </RelativeLayout>

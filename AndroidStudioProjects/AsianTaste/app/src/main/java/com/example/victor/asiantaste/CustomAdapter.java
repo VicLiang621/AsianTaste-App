@@ -26,14 +26,14 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
     private ArrayList<Integer> quantity_list = new ArrayList<Integer>();
     private ArrayList<String> price_list = new ArrayList<>();
     private HashMap<String, String> menu = new HashMap<>();
-    private OrderClass orderClass = new OrderClass();
-    public CustomAdapter(ArrayList<String> order_name_list, ArrayList<Integer> quantity_list,
-                         HashMap<String, String> menu, OrderClass orderClass,  Context context) {
-        this.order_name_list = order_name_list;
-        this.quantity_list = quantity_list;
-        this.context = context;
-        this.menu = menu;
+    private OrderClass orderClass;
+    public CustomAdapter(OrderClass orderClass,  Context context) {
         this.orderClass = orderClass;
+        this.order_name_list = orderClass.getOrderNameList();
+        this.quantity_list = orderClass.getQuantityList();
+        this.context = context;
+        this.menu = orderClass.getMenu();
+        this.price_list = orderClass.getPriceList();
     }
 
 
@@ -54,28 +54,41 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
+        // TODO: Can implement holders to increase performance
+        final DecimalFormat d = new DecimalFormat("##.##");
         View view = convertView;
         if (view ==null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.customlistview, null);
+            view = inflater.inflate(R.layout.customlistview,null);
         }
 
-        for (int i =0; i < order_name_list.size(); i++){
-
-            price_list.add(String.valueOf(Double.parseDouble(menu.get(order_name_list.get(i)))));
-        }
-        TextView listItemText = (TextView)view.findViewById(R.id.list_item_string);
-
+        final TextView listItemText = (TextView)view.findViewById(R.id.list_item_string);
+        final TextView priceView = (TextView)view.findViewById(R.id.priceView);
         listItemText.setText(order_name_list.get(position));
 
-        TextView priceView = (TextView)view.findViewById(R.id.priceView);
-        double initialPrice = Double.parseDouble(price_list.get(position));
-        String priceViewText = "$" + String.valueOf(initialPrice);
-        priceView.setText(priceViewText);
+
         final TextView quantityText = (TextView)view.findViewById(R.id.quantityView); //TODO: Need to change this so that any quantity can be inputted
         quantityText.setText(String.valueOf(quantity_list.get(position))); // TODO: No negatives allowed
+        if (price_list.size() >0) {
+            String priceViewText = price_list.get(position);
+            priceView.setText(priceViewText);
+        }
+
+        double subtotalPrice =0;
+
+        for (int j =0; j< price_list.size(); j++){
+            subtotalPrice+= Double.parseDouble(price_list.get(j));
+        }
 
 
+        if(context instanceof Appetizers){
+            if(order_name_list.size() != 0) {
+                ((Appetizers) context).setSubtotal(subtotalPrice);
+            }
+            else{
+                ((Appetizers) context).setSubtotal(0);
+            }
+        }
 
 
         Button deleteBtn = (Button)view.findViewById(R.id.delete_button);
@@ -88,6 +101,13 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
                 order_name_list.remove(position);
                 quantity_list.remove(position);
                 orderClass.reUpdateOrderhm(order_name_list, quantity_list);
+                price_list = orderClass.getPriceList();
+
+                if(context instanceof Appetizers){
+                    if(order_name_list.size() == 0) {
+                        ((Appetizers) context).setSubtotal(0);
+                    }
+                }
                 notifyDataSetChanged();
             }
         });
@@ -99,8 +119,10 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
                 double newsubPrice = Double.parseDouble(menu.get(order_name_list.get(position)))
                         * quantity_list.get(position);
 
-                DecimalFormat f = new DecimalFormat("##.00"); //TODO: Need to get 2 decimal places to display
-                price_list.set(position, String.valueOf(f.format(newsubPrice)));
+                //TODO: Need to get 2 decimal places to display
+                price_list.set(position, d.format(newsubPrice));
+                orderClass.reUpdateOrderhm(order_name_list, quantity_list);
+                price_list = orderClass.getPriceList();
                 notifyDataSetChanged();
             }
         });
@@ -112,12 +134,17 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
                 quantity_list.set(position, newaddQuant);
                 double newaddPrice = Double.parseDouble(menu.get(order_name_list.get(position)))
                         * quantity_list.get(position);
-                DecimalFormat f = new DecimalFormat("##.00"); //TODO: Need to get 2 decimal places to display
-                price_list.set(position, String.valueOf(f.format(newaddPrice)));
+               //TODO: Need to get 2 decimal places to display
+                price_list.set(position, d.format(newaddPrice));
+                orderClass.reUpdateOrderhm(order_name_list, quantity_list);
+                price_list = orderClass.getPriceList();
+
                 notifyDataSetChanged();
 
             }
         });
+
+
 
         return view;
     }

@@ -2,35 +2,61 @@ package com.example.victor.asiantaste;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.text.DecimalFormat;
+
 
 public class Appetizers extends AppCompatActivity implements View.OnClickListener {
 
-    int[] quantities;
     CustomAdapter adapter;
     OrderClass orderClass;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appetizers);
         setupButtons();
         orderClass = ((OrderClass)getApplicationContext());
-        HashMap<String, String> menu = orderClass.getMenu();
-
-
-        adapter = new CustomAdapter(orderClass.getOrderNameList(),
-                orderClass.getQuantityList(), menu, orderClass, this);
-
+        adapter = new CustomAdapter(orderClass, this);
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
+        final TextView subtotalPriceView = (TextView)findViewById(R.id.subtotalpriceView);
+        final TextView totalPriceView = (TextView)findViewById(R.id.totalPriceView);
+        final TextView taxPriceView = (TextView)findViewById(R.id.taxPriceView);
+
+
+        subtotalPriceView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                double taxPrice = Double.parseDouble(subtotalPriceView.getText().toString()) * 0.0625;
+                DecimalFormat d = new DecimalFormat("##.##");
+                String roundedTaxPrice = d.format(taxPrice);
+                taxPriceView.setText(roundedTaxPrice);
+                double totalPrice = Double.parseDouble(roundedTaxPrice) +
+                        Double.parseDouble(subtotalPriceView.getText().toString());
+                totalPriceView.setText(d.format(totalPrice));
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+
+            }
+        });
+
 
 
     }
@@ -48,12 +74,10 @@ public class Appetizers extends AppCompatActivity implements View.OnClickListene
     }
     @Override
     public void onClick(View v) {
-        Log.d("Test", "Inside onClick function");
         orderClass = ((OrderClass) getApplicationContext());
         switch(v.getId()){
             case R.id.btn1:
-                Log.d("Test", "got inside switch");
-                orderClass.addAppetizer("Small Fried Wonton", adapter); //
+                orderClass.addAppetizer("Small Fried Wonton", adapter);
                 // TODO: I don't know if passing in an adapter to notify it is better or just calling notify dataset in each switch case itself
                 break;
             case R.id.btn2:
@@ -169,8 +193,15 @@ public class Appetizers extends AppCompatActivity implements View.OnClickListene
                 Toast.makeText(Appetizers.this, "Clicked back button", Toast.LENGTH_LONG).show();
                 orderClass.reUpdateOrderhm(adapter.getOrderNamesList(), adapter.getQuantityList());
                 finish();
-
+                break;
         }
+    }
+
+
+    public void setSubtotal(double subtotalPrice){
+        final TextView subtotalPriceView = (TextView)findViewById(R.id.subtotalpriceView);
+        final DecimalFormat d = new DecimalFormat("##.##");
+        subtotalPriceView.setText(d.format(subtotalPrice));
     }
 
 

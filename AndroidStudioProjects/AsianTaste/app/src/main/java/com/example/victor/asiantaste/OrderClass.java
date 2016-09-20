@@ -4,17 +4,20 @@ import android.app.Application;
 import android.util.Log;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * Created by Victor on 9/8/2016.
  */
 public class OrderClass extends Application {
-    private HashMap<String, Integer> order_hm = new HashMap<>();
+    private LinkedHashMap<String, Integer> order_hm = new LinkedHashMap<>();
     private HashMap<String, String> menu = new HashMap<String, String>();
     private ArrayList<String> order_names_list = new ArrayList<String>();
-    private ArrayList<Integer> quantity_list = new ArrayList<Integer>();
+    private ArrayList<Integer> quantity_list = new ArrayList<>();
+    private ArrayList<String> price_list = new ArrayList<>();
 
     public void putOrderhm(String name, Integer quantity) {
         order_hm.put(name, quantity);
@@ -75,6 +78,7 @@ public class OrderClass extends Application {
         }
         updateOrderList();
         updateQuantityList();
+        updatePriceList();
         adapter.notifyDataSetChanged();
     }
 
@@ -84,6 +88,10 @@ public class OrderClass extends Application {
 
     public ArrayList<Integer> getQuantityList(){
         return quantity_list;
+    }
+
+    public ArrayList<String> getPriceList(){
+        return price_list;
     }
 
     public void updateQuantityList() {
@@ -104,6 +112,19 @@ public class OrderClass extends Application {
         order_hm.clear();
         for (int i = 0; i < order_names_list.size(); i++){
             order_hm.put(order_names_list.get(i), quantity_list.get(i));
+        }
+
+        updateOrderList();
+        updateQuantityList();
+        updatePriceList();
+    }
+
+    public void updatePriceList(){
+        price_list.clear();
+        for (int i=0; i< order_names_list.size(); i++){
+            DecimalFormat f = new DecimalFormat("##.##"); //TODO: Need to get 2 decimal places to display
+            String price = f.format(Double.parseDouble(menu.get(order_names_list.get(i))) * quantity_list.get(i));
+            price_list.add(price);
         }
     }
 

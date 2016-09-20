@@ -5,10 +5,10 @@
 
     <TextView
         android:id="@+id/list_item_string"
-        android:layout_width="120dp"
+        android:layout_width="200dp"
         android:layout_height="20dp"
         android:paddingLeft="8dp"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:textStyle="bold"
         android:text= "Text goes here"
         android:layout_centerVertical="true"
@@ -16,9 +16,9 @@
         android:layout_toEndOf="@+id/delete_button" />
 
     <Button
-        android:layout_width="75dp"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="Delete"
+        android:text="X"
         android:id="@+id/delete_button"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
@@ -31,12 +31,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="8dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:text="Price"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_alignTop="@+id/quantityView"
+        android:paddingTop="15dp"
+        android:layout_alignTop="@+id/list_item_string"
         android:layout_toRightOf="@+id/add_button"
         android:layout_toEndOf="@+id/add_button" />
 
@@ -46,11 +45,9 @@
         android:layout_height="wrap_content"
         android:text="-"
         android:id="@+id/subtract_button"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
-        android:layout_alignTop="@+id/delete_button"
-        android:layout_toRightOf="@+id/list_item_string"
-        android:layout_toEndOf="@+id/list_item_string" />
+        android:layout_alignBottom="@+id/delete_button"
+        android:layout_alignRight="@+id/list_item_string"
+        android:layout_alignEnd="@+id/list_item_string" />
     <Button
     style="?android:attr/buttonStyleSmall"
     android:layout_width="wrap_content"
@@ -70,6 +67,19 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/subtract_button"
         android:layout_toEndOf="@+id/subtract_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Modify"
+        android:id="@+id/modifyButton"
+        android:layout_alignTop="@+id/add_button"
+        android:layout_toRightOf="@+id/priceView"
+        android:layout_toEndOf="@+id/priceView"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+
 
 
 </RelativeLayout>
