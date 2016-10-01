@@ -18,6 +18,7 @@ public class OrderClass extends Application {
     private ArrayList<String> order_names_list = new ArrayList<String>();
     private ArrayList<Integer> quantity_list = new ArrayList<>();
     private ArrayList<String> price_list = new ArrayList<>();
+    private ArrayList<String> modify_list = new ArrayList<>();
 
     public void putOrderhm(String name, Integer quantity) {
         order_hm.put(name, quantity);
@@ -127,6 +128,16 @@ public class OrderClass extends Application {
             price_list.add(price);
         }
     }
+
+    public ArrayList<String> getModifyList(){
+        return modify_list;
+    }
+
+    public void addModifyList(String modification){
+        modify_list.add(modification);
+    }
+
+
 
 
 }

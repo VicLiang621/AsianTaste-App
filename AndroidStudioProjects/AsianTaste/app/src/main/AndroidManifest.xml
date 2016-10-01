@@ -18,12 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PopUp"
+            android:theme="@style/AppTheme.CustomTheme">
+        </activity>
         <activity
             android:name=".MeatsActivity"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape">
+        </activity>
         <activity android:name=".Appetizers"
             android:screenOrientation="landscape">
         </activity>
+
 
     </application>
 

@@ -2,13 +2,16 @@ package com.example.victor.asiantaste;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
+
 import android.widget.TextView;
 
 
@@ -89,8 +92,7 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
                 ((Appetizers) context).setSubtotal(0);
             }
         }
-
-
+        final ImageButton modifyBtn = (ImageButton)view.findViewById(R.id.modifyButton);
         Button deleteBtn = (Button)view.findViewById(R.id.delete_button);
         Button subtractBtn =(Button)view.findViewById(R.id.subtract_button);
         Button addBtn = (Button)view.findViewById(R.id.add_button);
@@ -143,7 +145,16 @@ public class CustomAdapter extends BaseAdapter implements ListAdapter {
 
             }
         });
+        modifyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent appetizer_to_popup = new Intent(context, PopUp.class);
+                context.startActivity(appetizer_to_popup);
+
+
+            }
+        });
 
 
         return view;

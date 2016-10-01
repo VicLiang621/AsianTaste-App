@@ -646,8 +646,8 @@
         android:layout_alignStart="@+id/taxView" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0.00"
         android:id="@+id/subtotalpriceView"
@@ -656,18 +656,20 @@
         android:layout_toEndOf="@+id/textView" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0.00"
         android:id="@+id/taxPriceView"
         android:layout_above="@+id/totalPriceView"
+        android:layout_below="@id/subtotalpriceView"
+        android:paddingTop="4dp"
         android:layout_alignLeft="@+id/totalPriceView"
         android:layout_alignStart="@+id/totalPriceView" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0.00"
         android:id="@+id/totalPriceView"
