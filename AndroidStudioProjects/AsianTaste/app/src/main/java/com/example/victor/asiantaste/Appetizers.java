@@ -85,7 +85,6 @@ public class Appetizers extends AppCompatActivity implements View.OnClickListene
                 break;
             case R.id.btn3 :
                 orderClass.addAppetizer("Small Egg Roll", adapter);
-
                 break;
             case R.id.btn4:
                 orderClass.addAppetizer("Large Egg Roll", adapter);

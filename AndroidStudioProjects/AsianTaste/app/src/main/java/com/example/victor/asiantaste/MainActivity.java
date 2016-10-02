@@ -33,8 +33,10 @@ public class    MainActivity extends AppCompatActivity {
         Log.d("Creation","Create a buffer reader");
         try{
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("OrderPrices.txt")));
+            BufferedReader modifyreader = new BufferedReader(new InputStreamReader(getAssets().open("modifications.txt")));
             orders.putMenuhm(reader);
-            Log.d("Creation", "Added to menu");
+            orders.addModifyList(modifyreader);
+            Log.d("Creation", "Added to menu and modify reader");
         }
         catch(IOException e){
             e.printStackTrace();
@@ -49,7 +51,6 @@ public class    MainActivity extends AppCompatActivity {
         orders = ((OrderClass) getApplicationContext());
         makeMenu(orders);
         orders.printMenu();
-
 
     }
 

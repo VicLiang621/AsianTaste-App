@@ -22,7 +22,6 @@ public class PopUp extends Activity {
         int height = dm.heightPixels;
         getWindow().setLayout((int)(width*.8), (int)(height*0.8));
         OrderClass orderClass = ((OrderClass)getApplicationContext());
-        orderClass.addModifyList("Hello");
         Log.d("popup", "added in something to modify list in orderClass");
         Log.d("popup", "gonna create modify adapter");
         ModifyListViewAdapter modifyListViewAdapter =  new ModifyListViewAdapter(orderClass, this);

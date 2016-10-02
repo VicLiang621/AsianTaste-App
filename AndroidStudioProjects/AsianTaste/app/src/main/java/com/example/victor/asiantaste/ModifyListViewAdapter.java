@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
 
 import java.util.ArrayList;
 
@@ -46,9 +48,8 @@ class ModifyListViewAdapter extends BaseAdapter implements ListAdapter {
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.custommodifylistview,null);
         }
-
-        TextView modification_text = (TextView)view.findViewById(R.id.modifyText);
-        Log.d("popup", modify_list.get(position));
+        TextView modification_text = (TextView)view.findViewById(R.id.modificationText);
+        CheckBox checkBox = (CheckBox)view.findViewById(R.id.checkBox);
         modification_text.setText(modify_list.get(position));
         return view;
     }

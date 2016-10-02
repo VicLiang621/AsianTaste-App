@@ -133,11 +133,12 @@ public class OrderClass extends Application {
         return modify_list;
     }
 
-    public void addModifyList(String modification){
-        modify_list.add(modification);
+    public void addModifyList(BufferedReader modifyReader) throws IOException {
+       String modification;
+        while ((modification = modifyReader.readLine()) != null) {
+            modify_list.add(modification);
+        }
+
     }
-
-
-
 
 }
