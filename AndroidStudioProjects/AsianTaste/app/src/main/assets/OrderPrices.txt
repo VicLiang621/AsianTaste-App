@@ -1,0 +1,36 @@
+Small Fried Wonton: 3.25
+Large Fried Wonton: 4.95
+Small Egg Roll: 2.95
+Large Egg Roll: 4.95
+Small Spring Roll: 2.95
+Large Spring Roll: 4.95
+Small Scallion Pancake: 4.50
+Large Scallion Pancake: 6.25
+Small Fried Veggie: 3.95
+Large Fried Veggie: 6.25
+Small Chicken Wings: 6.75
+Large Chicken Wings: 10.45
+Small Spicy Chicken Wings: 6.25
+Large Spicy Chicken Wings: 8.95
+Small Pork Strip: 6.95
+Large Pork Strip: 9.95
+Small BBQ Spareribs: 6.75
+Large BBQ Spareribs: 9.95
+Small Boneless Spareribs: 5.50
+Large Boneless Spareribs: 8.95
+Small Crab Rangoon: 5.95
+Large Crab Rangoon: 8.50
+Small Chicken Fingers: 6.25
+Large Chicken Fingers: 8.50
+Small Jumbo Fried Shrimp: 5.95
+Large Jumbo Fried Shrimp: 9.95
+Small Beef Teriyaki: 6.95
+Large Beef Teriyaki: 10.95
+Small Chicken Teriyaki: 6.95
+Large Chicken Teriyaki: 10.95
+Small Pan Fried Ravioli: 5.95
+Large Pan Fried Ravioli: 9.25
+Spicy Wonton with Bean Sprout: 8.25
+Pu Pu Platter for Two: 22.95
+Pu Pu Platter for One: 13.50
+Tibits: 14.50 
